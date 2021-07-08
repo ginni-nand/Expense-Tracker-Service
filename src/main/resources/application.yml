@@ -1,0 +1,15 @@
+micronaut:
+  application:
+    name: expenseTracker
+    server:
+      port: 9000
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: ''
+liquibase:
+  datasources:
+    default:
+      change-log: 'classpath:liquibase-changelog.xml'
