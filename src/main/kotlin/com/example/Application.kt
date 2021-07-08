@@ -1,4 +1,4 @@
-package com.expense
+package com.example
 
 import io.micronaut.runtime.Micronaut.*
 fun main(args: Array<String>) {

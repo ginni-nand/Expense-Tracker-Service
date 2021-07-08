@@ -79,6 +79,6 @@ tasks {
         password = ""
         inputDir = file("src/main/sql")
         outDir = file("src/main/gen")
-        basePath = file("src/main/kotlin/com/expense")
+        basePath = file("src/main/kotlin/com/example")
     }
 }
