@@ -74,11 +74,11 @@ tasks {
         images = ["${System.env.DOCKER_IMAGE ?: project.name}:$project.version"]
     }
     norm {
-        jdbcUrl = "jdbc:postgresql://localhost:5432/exam_app"
+        jdbcUrl = "jdbc:postgresql://localhost:5432/expense-tracker"
         username = "postgres"
         password = ""
         inputDir = file("src/main/sql")
         outDir = file("src/main/gen")
-        basePath = file("src/main/kotlin/com/examapp")
+        basePath = file("src/main/kotlin/com/expense")
     }
 }
