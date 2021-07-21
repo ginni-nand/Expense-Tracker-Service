@@ -7,7 +7,7 @@ import io.micronaut.http.annotation.Post
 import java.net.http.HttpResponse
 import javax.inject.Inject
 
-@Controller("/")
+@Controller("/api")
 class CustomerController (@Inject private  val customerService: CustomerService){
     @Post("/register")
     fun addNewUser(@Body customer: Customer)
