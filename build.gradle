@@ -40,6 +40,8 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.testcontainers:postgresql")
     testImplementation("org.testcontainers:testcontainers")
+    testImplementation "com.medly.norm:runtime:$normVersion"
+
     implementation("io.micronaut:micronaut-validation")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")

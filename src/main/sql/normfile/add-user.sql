@@ -1,0 +1,1 @@
+INSERT INTO users(name,age,email,password) VALUES(:name,:age,:email,:password) RETURNING *;
