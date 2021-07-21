@@ -1,18 +1,21 @@
 package com.example.users.customers
 
 import com.example.users.Exceptions.AuthException
+import org.mindrot.jbcrypt.BCrypt
 import java.sql.SQLException
 import java.util.regex.Pattern
 import javax.inject.Inject
 import javax.inject.Singleton
+
 
 @Singleton
 class CustomerService(@Inject  private val customerRepository: CustomerRepository){
 
     fun addNewUser(name: String, age: Int, email: String, password: String):ReturnUserDetails? {
         if(!EMAIL_ADDRESS_PATTERN.matcher(email).matches())throw AuthException("Wrong Email format")
+        val hashedPassword: String = BCrypt.hashpw(password, BCrypt.gensalt())
          try {
-             return customerRepository.addNewUser(name, age, email, password)
+             return customerRepository.addNewUser(name, age, email, hashedPassword)
          } catch (e:SQLException)
          {
              throw AuthException("EmailId already exists")

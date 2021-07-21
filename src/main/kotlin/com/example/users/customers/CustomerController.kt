@@ -13,5 +13,10 @@ class CustomerController (@Inject private  val customerService: CustomerService)
     fun addNewUser(@Body customer: Customer)
     {  customerService.addNewUser(customer.name,customer.age,customer.email,customer.password)
     }
+    @Post("/login")
+    fun loginUser(@Body loginDetails: loginDetails)
+    {
+
+    }
 
 }
