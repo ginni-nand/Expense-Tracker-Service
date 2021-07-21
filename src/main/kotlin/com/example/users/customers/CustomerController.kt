@@ -16,7 +16,7 @@ class CustomerController (@Inject private  val customerService: CustomerService)
     @Post("/login")
     fun loginUser(@Body loginDetails: loginDetails)
     {
-
+      customerService.loginUser(loginDetails.email,loginDetails.password)
     }
 
 }
