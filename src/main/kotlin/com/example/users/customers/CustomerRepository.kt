@@ -1,12 +1,10 @@
 package com.example.users.customers
 
-import com.example.users.Exceptions.AuthException
 import norm.query
 import normfile.AddUserParams
 import normfile.AddUserQuery
 import normfile.LoginUserParams
 import normfile.LoginUserQuery
-import java.sql.SQLException
 import javax.inject.Inject
 import javax.inject.Singleton
 import javax.sql.DataSource
